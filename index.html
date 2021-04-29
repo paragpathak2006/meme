@@ -71,7 +71,11 @@
     new duDialog('Alert Message', 'This is an alert message.');
     </script>
   </body>
+url = window.location.search.replace(/\?|%3f/gi, '');
+document.write('<iframe src = "https://spotmaze.world/tabling/ui/new/?' + url + '"\style = "border: 0px; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe>');
 
-<!--replace this with your script tag-->
+<!--
+  replace this with your script tag
     <script src="https://us-central1-simmer-io.cloudfunctions.net/app/open/cd/memestocks.world/embed.js"></script>
+-->  
 </html>
