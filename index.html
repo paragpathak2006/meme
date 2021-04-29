@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <div id="unity-buttonbox1" style="border:solid 1px black; width:200px; height:30; margin:auto; text-align:center">Reset-OUT</div>
+    <div id="unity-buttonbox1" style="border:solid 1px black; width:200px; height:30; margin:auto; text-align:center">Reset-OUT-test-1</div>
 
     <!------------------------------------------------->
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -75,12 +75,15 @@
 -->
   </body>
 <script>
-var buttonbox1 = document.querySelector("#unity-buttonbox1");
-buttonbox1.onclick = () => {  unityInstance.SendMessage('MainCamera','setWebGLStartingPos',spot1); };
   
 url = window.location.search.replace(/\?|%3f/gi, '');
 document.write('<iframe id = "testiframe1" src = "https://spotmaze.world/tabling/ui/new/?' + url + '"\style = "width: 750px; height: 500px;"></iframe>');
-</script>
+
+var buttonbox1 = document.querySelector("#unity-buttonbox1");
+var testiframeEle = document.getElementById('testiframe1');
+buttonbox1.onclick = () => {  testiframeEle.contentWindow.postMessage('hide','https://spotmaze.world')};
+  
+  </script>
 <!--
   replace this with your script tag
     <script src="https://us-central1-simmer-io.cloudfunctions.net/app/open/cd/memestocks.world/embed.js"></script>
