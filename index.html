@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    
+    <div id="unity-buttonbox1" style="border:solid 1px black; width:200px; height:30; margin:auto; text-align:center">Reset-OUT</div>
+
     <!------------------------------------------------->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JMNK5PEDS"></script>
@@ -74,8 +75,11 @@
 -->
   </body>
 <script>
+var buttonbox1 = document.querySelector("#unity-buttonbox1");
+buttonbox1.onclick = () => {  unityInstance.SendMessage('MainCamera','setWebGLStartingPos',spot1); };
+  
 url = window.location.search.replace(/\?|%3f/gi, '');
-document.write('<iframe src = "https://spotmaze.world/tabling/ui/new/?' + url + '"\style = "width: 750px; height: 500px;"></iframe>');
+document.write('<iframe id = "iframe1" src = "https://spotmaze.world/tabling/ui/new/?' + url + '"\style = "width: 750px; height: 500px;"></iframe>');
 </script>
 <!--
   replace this with your script tag
